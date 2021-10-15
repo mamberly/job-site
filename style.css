@@ -65,7 +65,7 @@ h1{
 }
 
 /* The actual popup */
-.popup .popuptext {
+.popuptext {
   visibility: hidden;
   background-color: white;
   color: #0d4070;
@@ -74,6 +74,7 @@ h1{
   padding: 10px;
   position: absolute;
   font-size: 18px;
+  width: 400px;
 }
 
 /* Toggle this class - hide and show the popup */

@@ -30,7 +30,8 @@ document.getElementById("submitInput").addEventListener("click", function(event)
 	  })
 		.then(function(json) {
 			var jobs = json.jobs;
-			var allJobData = "<h1>We found " + json.totalCount + " jobs for you!</h1>";
+			var allJobData = "<div class = \"item\"><h1>We found " + json.totalCount + " jobs for you!</h1></div>";
+			allJobData += "<div class = \"item\">";
 			for (let i = 0; i < jobs.length; i++) {
 				let job = jobs[i];
 				let jobData = "<div class = \"popup\" id = \"job" + i + "\">";
@@ -49,6 +50,7 @@ document.getElementById("submitInput").addEventListener("click", function(event)
 				jobData += "</div>" //close jobDescription div
 				allJobData += jobData;
 			}
+			allJobData += "</div>";
 			document.getElementById("jobResults").innerHTML = allJobData;
 
 			for (let i = 0; i < jobs.length; i++) {
